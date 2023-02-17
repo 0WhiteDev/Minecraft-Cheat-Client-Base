@@ -50,6 +50,20 @@ CrashManager.getManager().addMethod(
 
 I've also created some basic visual information and extras that can help you create your own gui!
 
+If you want to **add a game status with your logo and name**, go to
+```client.whitedev.mods.Discord```
+
+Change:
+```private final String applicationId = "APP_ID_HERE";```
+On the your **discord app ID**
+
+Set your logo and name here:
+```
+.setBigImage("logo", "ClientBase 1.8.9 | " + ClientBase.getClient().version)
+```
+
+**"logo"** - the name of the image that we added to our application
+
 #### Overview of Commands
 - **#author** - Check Client Author and his SocialMedia
 - **#help** - Check all commands and they description
