@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>lol.szymeko</groupId>
+  <artifactId>AyakashiClient</artifactId>
+  <version>2.0</version>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>jitpack</id>
+      <url>https://jitpack.io</url>
+    </repository>
+    <repository>
+      <id>minecraft</id>
+      <url>https://libraries.minecraft.net/</url>
+    </repository>
+    <repository>
+      <id>okaeri-repo</id>
+      <url>https://storehouse.okaeri.eu/repository/maven-public/</url>
+    </repository>
+  </repositories>
+
+<!--  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+
+        <configuration>
+          <finalName>Ayakashi</finalName>
+          <minimizeJar>true</minimizeJar>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+        </configuration>
+      </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>11</source>
+                <target>11</target>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>-->
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+
+        <configuration>
+          <finalName>Ayakashi</finalName>
+          <minimizeJar>true</minimizeJar>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+<!--  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.4</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>-->
+
+  <dependencies>
+
+    <dependency>
+      <groupId>ViaBackwards</groupId>
+      <artifactId>ViaBackwards</artifactId>
+      <version>4.0.2-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/libs/ViaBackwards.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>ViaRewind</groupId>
+      <artifactId>ViaRewind</artifactId>
+      <version>2.0.2-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/libs/ViaRewind.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>ViaSnakeYaml</groupId>
+      <artifactId>ViaSnakeYaml</artifactId>
+      <version>1.27</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/libs/ViaSnakeYaml.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>ViaVersion</groupId>
+      <artifactId>ViaVersion</artifactId>
+      <version>4.0.2-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/libs/ViaVersion.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>eu.okaeri</groupId>
+      <artifactId>okaeri-injector</artifactId>
+      <version>1.7.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>discord-rpc</artifactId>
+      <groupId>com.github.Vatuu</groupId>
+      <version>1.6.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.l33tlabs.twl</groupId>
+      <artifactId>pngdecoder</artifactId>
+      <version>1.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>authlib</artifactId>
+      <groupId>com.mojang</groupId>
+      <version>1.5.25</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>commons-codec</artifactId>
+      <groupId>commons-codec</groupId>
+      <version>1.15</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>commons-compress</artifactId>
+      <groupId>org.apache.commons</groupId>
+      <version>1.20</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>commons-io</artifactId>
+      <groupId>commons-io</groupId>
+      <version>2.8.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>tv.twitch</groupId>
+      <artifactId>twitch</artifactId>
+      <version>6.5</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>commons-lang3</artifactId>
+      <groupId>org.apache.commons</groupId>
+      <version>3.11</version>
+    </dependency>
+
+<!--
+    <dependency>
+      <groupId>org.reflections</groupId>
+      <artifactId>reflections</artifactId>
+      <version>0.9.12</version>
+    </dependency>
+-->
+
+    <dependency>
+      <artifactId>commons-logging</artifactId>
+      <groupId>commons-logging</groupId>
+      <version>1.2</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>gson</artifactId>
+      <groupId>com.google.code.gson</groupId>
+      <version>2.8.6</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>guava</artifactId>
+      <groupId>com.google.guava</groupId>
+      <version>17.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>httpclient</artifactId>
+      <groupId>org.apache.httpcomponents</groupId>
+      <version>4.5.13</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>httpcore</artifactId>
+      <groupId>org.apache.httpcomponents</groupId>
+      <version>4.4.14</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>icu4j</artifactId>
+      <groupId>com.ibm.icu</groupId>
+      <version>68.2</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>jinput</artifactId>
+      <groupId>net.java.jinput</groupId>
+      <version>2.0.9</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>jinput-platform</artifactId>
+      <groupId>net.java.jinput</groupId>
+      <version>2.0.7</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <artifactId>jna</artifactId>
+      <groupId>net.java.dev.jna</groupId>
+      <version>5.6.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>jna-platform</artifactId>
+      <groupId>net.java.dev.jna</groupId>
+      <version>5.6.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>jopt-simple</artifactId>
+      <groupId>net.sf.jopt-simple</groupId>
+      <version>5.0.4</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>jutils</artifactId>
+      <groupId>net.java.jutils</groupId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>log4j-api</artifactId>
+      <groupId>org.apache.logging.log4j</groupId>
+      <version>2.14.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>log4j-core</artifactId>
+      <groupId>org.apache.logging.log4j</groupId>
+      <version>2.14.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>netty-all</artifactId>
+      <groupId>io.netty</groupId>
+      <version>4.0.25.Final</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>lwjgl</artifactId>
+      <groupId>org.lwjgl.lwjgl</groupId>
+      <version>2.9.3</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>lwjgl_util</artifactId>
+      <groupId>org.lwjgl.lwjgl</groupId>
+      <version>2.9.3</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>lwjgl-platform</artifactId>
+      <groupId>org.lwjgl.lwjgl</groupId>
+      <version>2.9.3</version>
+      <type>pom</type>
+    </dependency>
+
+    <dependency>
+      <artifactId>paulscode-soundsystem</artifactId>
+      <groupId>com.github.nullnoname</groupId>
+      <version>2013.04.17-unofficial</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.github.oshi</groupId>
+      <artifactId>oshi-core</artifactId>
+      <version>5.5.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>vecmath</artifactId>
+      <groupId>javax.vecmath</groupId>
+      <version>1.5.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm</artifactId>
+      <version>9.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm-tree</artifactId>
+      <version>9.0</version>
+    </dependency>
+  </dependencies>
+
+</project>
