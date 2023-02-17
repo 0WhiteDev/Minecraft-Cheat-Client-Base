@@ -574,7 +574,7 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback
     }
 
     public void drawDefaultBackground() {
-        this.drawBackground(0);
+        this.drawWorldBackground(0);
     }
 
     public void drawWorldBackground(int tint)
