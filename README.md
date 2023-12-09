@@ -21,7 +21,8 @@ Libs that are not included in Maven and need to be imported manually in your pro
 
 #### How to Run Client
 - Open project in your IDE
-- Add all external libs what is not included in Maven
+- Add all external libs what is not included in Maven (folder "libs")
+- Add as a lib also the "natives" folder
 - Run MainClass (Start.java)
 
 #### Overview of Client
