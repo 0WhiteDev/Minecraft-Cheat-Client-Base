@@ -78,7 +78,7 @@ Crash Command Example:
 
 #### Client Suppot
 If you need help with the client, text to me:
-- Discord: 0WhiteDev#0001
+- Discord: 0whitedev / 0WhiteDev#0001
 - Email: 0whitedev@gmail.com
 ## Authors
 
